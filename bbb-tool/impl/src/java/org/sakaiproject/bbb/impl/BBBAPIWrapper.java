@@ -114,12 +114,22 @@ public class BBBAPIWrapper/* implements Runnable */{
         if (bbbUrlString == ""){
             logger.warn("No BigBlueButton server specified. The bbb.url property in sakai.properties must be set to a single url. There should be a corresponding shared secret value in the bbb.salt property.");
             return;
+        } else {
+            // To make sure that old configurations including multiple servers in the string work 
+            // with the new version based on a single server
+            String[] bbbUrlStrings = bbbUrlString.split(",");
+            bbbUrlString = bbbUrlStrings[0];
         }
 
         String bbbSaltString = config.getString(BBBMeetingManager.CFG_SALT, DEFAULT_BBB_SALT);
         if (bbbSaltString == ""){
             logger.warn("BigBlueButton shared secret was not specified! Use 'bbb.salt = your_bbb_shared_secret' in sakai.properties.");
             return;
+        } else {
+            // To make sure that old configurations including multiple servers in the string work 
+            // with the new version based on a single server
+            String[] bbbSaltStrings = bbbSaltString.split(",");
+            bbbSaltString = bbbSaltStrings[0];
         }
 
         //Clean Url
