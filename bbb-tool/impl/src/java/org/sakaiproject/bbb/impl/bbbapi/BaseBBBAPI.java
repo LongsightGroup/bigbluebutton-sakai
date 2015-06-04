@@ -175,10 +175,8 @@ public class BaseBBBAPI implements BBBAPI {
             for(Entry<String, String> entry : meeting.getMeta().entrySet()) {
                 String key = entry.getKey();
                 String value = entry.getValue();
-
                 query.append("&meta_" + key + "=");
                 query.append(URLEncoder.encode(value, getParametersEncoding()));
-
             }
             // BSN: Ends
 
@@ -246,6 +244,7 @@ public class BaseBBBAPI implements BBBAPI {
             }
 
             return response;
+
         } catch (Exception e) {
             throw new BBBException(BBBException.MESSAGEKEY_INTERNALERROR, e.getMessage(), e);
         }
@@ -271,6 +270,7 @@ public class BaseBBBAPI implements BBBAPI {
             }
 
             return response;
+
         } catch (BBBException e) {
             logger.debug("getMeetingInfo.Exception: MessageKey=" + e.getMessageKey() + ", Message=" + e.getMessage() );
             throw new BBBException(e.getMessageKey(), e.getMessage(), e);
@@ -300,6 +300,7 @@ public class BaseBBBAPI implements BBBAPI {
             }
 
             return response;
+
         } catch (BBBException e) {
             logger.debug("getRecordings.Exception: MessageKey=" + e.getMessageKey() + ", Message=" + e.getMessage() );
             throw new BBBException(e.getMessageKey(), e.getMessage(), e);
@@ -380,6 +381,7 @@ public class BaseBBBAPI implements BBBAPI {
             userId = null;
             userDisplayName = "user";
         }
+
         StringBuilder joinQuery = new StringBuilder();
         joinQuery.append("meetingID=");
         joinQuery.append(meetingID);
@@ -389,6 +391,7 @@ public class BaseBBBAPI implements BBBAPI {
         } catch (UnsupportedEncodingException e) {
             joinQuery.append(userDisplayName);
         }
+
         joinQuery.append("&password=");
         joinQuery.append(password);
         //if (userId != null) {

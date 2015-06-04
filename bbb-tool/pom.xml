@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" 
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<packaging>pom</packaging> 
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <packaging>pom</packaging>
 
     <parent>
         <groupId>org.sakaiproject.purepoms</groupId>
@@ -11,9 +10,9 @@
         <version>2.8.4</version>
     </parent>
 
-	<name>BigBlueButton</name>
-	<groupId>org.sakaiproject.bbb</groupId>
-	<artifactId>bbb</artifactId>
+    <name>BigBlueButton</name>
+    <groupId>org.sakaiproject.bbb</groupId>
+    <artifactId>bbb</artifactId>
     <version>1.0.9</version>
     <description>Sakai BigBlueButton integrates a Sakai instance with a BigBlueButton server, allowing Sakai users to easily create and join BigBlueButton meetings from a Sakai worksite and access playback recording.</description>
 
@@ -22,11 +21,11 @@
     <organization>
         <name>Lancaster University (Centre for e-Science), Universidade Fernando Pessoa (UFPUV), Blindside Networks Inc(BN)</name>
         <url>http://e-science.lancs.ac.uk http://www.ufp.pt http://blindsidenetworks.com</url>
-    </organization>    
+    </organization>
     <inceptionYear>2010</inceptionYear>
 
-	<developers>
-		<developer>
+    <developers>
+        <developer>
             <name>Adrian Fish</name>
             <email>a.fish@lancaster.ac.uk</email>
             <organization>Lancaster University, Centre for e-Science</organization>
@@ -36,8 +35,8 @@
                 <role>Developer</role>
             </roles>
             <timezone>0</timezone>
-		</developer>
-		<developer>
+        </developer>
+        <developer>
             <name>Nuno Fernandes</name>
             <email>nuno@ufp.edu.pt</email>
             <organization>Universidade Fernando Pessoa</organization>
@@ -47,8 +46,8 @@
                 <role>Developer</role>
             </roles>
             <timezone>0</timezone>
-		</developer>
-		<developer>
+        </developer>
+        <developer>
             <name>Jesus Federico</name>
             <email>jesus@blindsidenetworks.com</email>
             <organization>Blindside Networks Inc</organization>
@@ -58,17 +57,18 @@
                 <role>Developer</role>
             </roles>
             <timezone>-5</timezone>
-		</developer>
-	</developers>
+        </developer>
+    </developers>
 
     <properties>
-        <!-- Build tracking  -->
+        <!-- Build tracking -->
         <maven.build.timestamp.format>yyMMdd_HHmm</maven.build.timestamp.format>
         <buildTimestamp>${maven.build.timestamp}</buildTimestamp>
         <buildSerial>2015060100</buildSerial>
         <!-- Regular properties -->
-        <!-- entitybroker.version can be set to any version from 1.3.9 to 1.3.20, 
-        by default it has been set up to 1.3.19, the one used with Sakai 2.8.2 -->
+        <!-- entitybroker.version can be set to any version from 1.3.9 to
+            1.3.20, by default it has been set up to 1.3.19, the one used with Sakai
+            2.8.2 -->
         <entitybroker.version>1.3.19</entitybroker.version>
         <entitybroker-utils.version>1.3.19</entitybroker-utils.version>
         <commons-beanutils.version>1.8.0</commons-beanutils.version>
@@ -81,9 +81,9 @@
     </properties>
 
     <scm>
-		<connection>scm:git:git@github.com:blindsidenetworks/bigbluebutton-sakai.git</connection>
-		<developerConnection>scm:git:git@github.com:blindsidenetworks/bigbluebutton-sakai.git</developerConnection>
-		<url>https://github.com/blindsidenetworks/bigbluebutton-sakai.git</url>
+        <connection>scm:git:git@github.com:blindsidenetworks/bigbluebutton-sakai.git</connection>
+        <developerConnection>scm:git:git@github.com:blindsidenetworks/bigbluebutton-sakai.git</developerConnection>
+        <url>https://github.com/blindsidenetworks/bigbluebutton-sakai.git</url>
     </scm>
 
     <issueManagement>
@@ -116,7 +116,7 @@
         </site>
     </distributionManagement>
 
-	<repositories>
+    <repositories>
         <repository>
             <id>sakai-maven2-snapshots</id>
             <name>Sakai Maven Repo Snapshots</name>
@@ -140,7 +140,7 @@
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>
-        </repository> 
+        </repository>
         <repository>
             <id>default</id>
             <name>Maven Repository Switchboard</name>
@@ -164,7 +164,7 @@
                 <enabled>false</enabled>
             </snapshots>
         </repository>
-	</repositories>
+    </repositories>
 
     <profiles>
         <profile>
@@ -185,8 +185,8 @@
     </profiles>
 
     <dependencyManagement>
-    	<dependencies>
-    	    <!-- BBB -->
+        <dependencies>
+            <!-- BBB -->
             <dependency>
                 <groupId>org.sakaiproject.bbb</groupId>
                 <artifactId>bbb-api</artifactId>
@@ -212,7 +212,7 @@
                 <artifactId>entitybroker-api</artifactId>
                 <version>${entitybroker.version}</version>
             </dependency>
-            
+
             <dependency>
                 <groupId>org.sakaiproject.entitybroker</groupId>
                 <artifactId>entitybroker-utils</artifactId>
@@ -248,12 +248,12 @@
                 <version>${log4j.version}</version>
                 <scope>provided</scope>
             </dependency>
-    	</dependencies>
+        </dependencies>
     </dependencyManagement>
 
     <build>
-    	<plugins>
-    		<plugin>
+        <plugins>
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>
                 <configuration>
@@ -266,7 +266,8 @@
                 <version>1.5.0</version>
                 <configuration>
                     <basedir>${basedir}</basedir>
-                    <!-- THIS IS A BRITTLE; IMPLEMENT REMOTE RESOURCE PLUGIN TO GET THIS FILE -->
+                    <!-- THIS IS A BRITTLE; IMPLEMENT REMOTE RESOURCE PLUGIN 
+                        TO GET THIS FILE -->
                     <header>https://source.sakaiproject.org/svn/sakai/trunk/ECLv2-header-template.txt</header>
                     <!-- <header>${user.home}/.m2/license-template.txt</header> -->
                     <quiet>false</quiet>
@@ -310,7 +311,7 @@
                     </execution>
                 </executions>
             </plugin>
-    	</plugins>
+        </plugins>
     </build>
 
     <reporting>
@@ -320,28 +321,29 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <reportSets>
-                  <reportSet>
-                    <id>aggregate</id>
-                    <configuration>
-                      <aggregate>true</aggregate>
-                          <source>1.5</source>
-                      <encoding>UTF-8</encoding>
-                        <links>
-                        <link>http://java.sun.com/j2se/1.5.0/docs/api</link>
-                        <link>http://java.sun.com/products/servlet/2.3/javadoc/</link>
-                      </links>
-                      <breakiterator>true</breakiterator>
-                      <verbose>false</verbose>
-                      <maxmemory>512m</maxmemory>
-                      <additionalJOption>
-                        -J-Xms168m -J-Xmx512m -J-XX:PermSize=128m -J-XX:NewSize=64m
-                      </additionalJOption>
-                    </configuration>
-                    <reports>
-                      <report>aggregate</report>
-                    </reports>
-                  </reportSet>
-                </reportSets>   
+                    <reportSet>
+                        <id>aggregate</id>
+                        <configuration>
+                            <aggregate>true</aggregate>
+                            <source>1.5</source>
+                            <encoding>UTF-8</encoding>
+                            <links>
+                                <link>http://java.sun.com/j2se/1.5.0/docs/api</link>
+                                <link>http://java.sun.com/products/servlet/2.3/javadoc/</link>
+                            </links>
+                            <breakiterator>true</breakiterator>
+                            <verbose>false</verbose>
+                            <maxmemory>512m</maxmemory>
+                            <additionalJOption>
+                                -J-Xms168m -J-Xmx512m
+                                -J-XX:PermSize=128m -J-XX:NewSize=64m
+                            </additionalJOption>
+                        </configuration>
+                        <reports>
+                            <report>aggregate</report>
+                        </reports>
+                    </reportSet>
+                </reportSets>
             </plugin>
             <!-- FindBugs: mvn findbugs:findbugs -->
             <plugin>
