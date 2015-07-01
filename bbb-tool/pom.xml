@@ -6,15 +6,15 @@
 	<packaging>pom</packaging> 
 
     <parent>
-        <groupId>org.sakaiproject.purepoms</groupId>
-        <artifactId>sakai-standard-tool</artifactId>
-        <version>2.8.4</version>
+        <groupId>org.sakaiproject</groupId>
+        <artifactId>master</artifactId>
+        <version>10.4</version>
     </parent>
 
 	<name>BigBlueButton</name>
 	<groupId>org.sakaiproject.bbb</groupId>
 	<artifactId>bbb</artifactId>
-    <version>1.0.8</version>
+    <version>1.0.9-SNAPSHOT</version>
     <description>Sakai BigBlueButton integrates a Sakai instance with a BigBlueButton server, allowing Sakai users to easily create and join BigBlueButton meetings from a Sakai worksite and access playback recording.</description>
 
     <url>http://confluence.sakaiproject.org/confluence/display/BBB</url>
@@ -76,7 +76,6 @@
         <commons-codec.version>1.4</commons-codec.version>
         <commons-lang.version>2.3</commons-lang.version>
         <log4j.version>1.2.9</log4j.version>
-        <ical4j.version>1.0.2</ical4j.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
@@ -230,18 +229,8 @@
                 <artifactId>commons-betwixt</artifactId>
                 <version>${commons-betwixt.version}</version>
             </dependency>
-            <dependency>
-                <groupId>commons-lang</groupId>
-                <artifactId>commons-lang</artifactId>
-                <version>${commons-lang.version}</version>
-            </dependency>
 
             <!-- Others -->
-            <dependency>
-                <groupId>net.fortuna.ical4j</groupId>
-                <artifactId>ical4j</artifactId>
-                <version>${ical4j.version}</version>
-            </dependency>
             <dependency>
                 <groupId>log4j</groupId>
                 <artifactId>log4j</artifactId>

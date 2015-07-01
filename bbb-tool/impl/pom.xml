@@ -7,7 +7,7 @@
   	<parent>
         <groupId>org.sakaiproject.bbb</groupId>
     	<artifactId>bbb</artifactId>
-    	<version>1.0.8</version>
+    	<version>1.0.9-SNAPSHOT</version>
   	</parent>
   
   	<name>BigBlueButton Implementation</name>
@@ -61,7 +61,7 @@
 		
 		<!-- Others -->
         <dependency>
-            <groupId>net.fortuna.ical4j</groupId>
+            <groupId>org.mnode.ical4j</groupId>
             <artifactId>ical4j</artifactId>
         </dependency>
         <dependency>
